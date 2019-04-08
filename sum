@@ -1,0 +1,4 @@
+- Clever, concise solutions - nice!
+- Pay more attention to vertical white-space - the code is hard to read.
+- Comments are sometimes a bit hard to understand.
+- Use __name__ == "__main__" everywhere.

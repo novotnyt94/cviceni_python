@@ -1,6 +1,7 @@
 def fibonacci(n=-1): #implementation for both fibo_gen and fibonacci
     i0 = 0
     i1 = 1
+    # Hmm, that's devilishly clever!
     while True:
         #infinite loop support
         if n == 0:

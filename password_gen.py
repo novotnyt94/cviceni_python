@@ -1,3 +1,13 @@
+# The dependency on numpy is a bit of an overkill and you would usually want
+# to avoid it -- if people only want a password generator, they don't want to
+# install numpy for it to work :). Besides, there's random.choice [1] in the
+# standard library.
+#
+# [1] https://docs.python.org/3/library/random.html#random.choice
+#
+# Unless, of course, you know that numpy gives better randomness. I don't think
+# so, but it's possible.
+
 import numpy.random as rand
 import string
 SPEC_CHARS = ['-','+','_','#','$','%','&','=',';','/','\\']
