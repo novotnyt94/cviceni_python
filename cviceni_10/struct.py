@@ -1,3 +1,18 @@
+# Feedback:
+#
+# > I don't know what this class should be good for...
+#
+# I think this is the key point. The metaclass itself is supposed
+# to be reusable. So if you're ever in a situation where you need
+# some of the Struct behavior, you don't need to re-implement it,
+# you can just inherit the metaclass again. Since all functions
+# are provided by the metaclass directly, the Struct looks like
+# a useless wrapper. But if you had more classes like Struct, this
+# could save you some typing. (Theoretically.)
+#
+# Kudos for putting it all together, I would have trouble :).
+# Sorry it took me almost a week to get to it. Attendance awarded.
+
 #Meta-class for the Struct task 
 class custom_meta(type):
   #Restructualize given class to have slots instead of dict; redefine __init__ and __repr__

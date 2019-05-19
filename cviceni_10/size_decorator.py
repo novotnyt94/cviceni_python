@@ -1,3 +1,13 @@
+# Feedback:
+#
+#     + Correct implementation.
+#     + Well commented. (Better use """function comment""" to document your code.)
+#     + __name__ == "__main__"
+#     - Please use four spaces to format you code!
+#     - Please use hashbang.
+#
+# The rest of the comments is inlined (look for Feedback:).
+
 #Decorator returning required descriptor
 def size(all_instances):
   def inner(function):
@@ -14,9 +24,10 @@ class CustomDescriptor:
     self.all_instances = all_instances
     
   def __get__(self, instance, owner):
+    # Feedback: "if instance" is enough, no need to test against None.
     if instance != None:
       return self.function(instance)
-    else:
+    else: # Feedback: else is unnecessary here.
       #run function over provided instances and sum the result
       values = [self.function(inst) for inst in self.all_instances()]
       return sum(values)
